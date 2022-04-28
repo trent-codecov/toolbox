@@ -1,8 +1,5 @@
-FROM alpine:3.6
-MAINTAINER Stephane Jourdan <fasten@fastmail.fm>
-LABEL version="20170712"
+FROM alpine:3.15.4
 LABEL name="toolbox"
-RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk --update --no-cache add \
   strace \
   bind-tools \
@@ -18,5 +15,6 @@ RUN apk --update --no-cache add \
   iputils \
   speedtest-cli py-setuptools \
   hdparm \
-  dstat@testing
+  dstat@testing \
+  redis
 COPY tests.sh /tmp/
