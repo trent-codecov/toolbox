@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-DOCKER_USER=trent-codecov
+DOCKER_USER=trentcodecov
 PRODUCT=toolbox
 
 build: ## Build container with cache
